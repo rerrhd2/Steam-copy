@@ -1,193 +1,1065 @@
+
 <!DOCTYPE html>
-<html lang="ru">
+<html class=" responsive DesktopUI" lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вход в Steam</title>
-    <style>
-        body {
-            background: #1b2838;
-            color: #c7d5e0;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/russian/background_main.png');
-            background-size: cover;
-            background-position: center;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-        }
-        .login-box {
-            background: #171a21;
-            padding: 20px;
-            border-radius: 5px;
-            width: 600px;
-            text-align: center;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .header img {
-            width: 150px;
-        }
-        .header .links a {
-            color: #c7d5e0;
-            text-decoration: none;
-            margin-left: 15px;
-            font-size: 12px;
-        }
-        .header .links a:hover {
-            color: #66c0f4;
-        }
-        h1 {
-            font-size: 36px;
-            margin: 0;
-            color: #ffffff;
-        }
-        .login-methods {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-        .login-form {
-            width: 50%;
-            text-align: left;
-        }
-        .login-form label {
-            display: block;
-            font-size: 12px;
-            color: #8f98a0;
-            margin-bottom: 5px;
-        }
-        .login-form input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            background: #32353c;
-            border: none;
-            border-radius: 3px;
-            color: #c7d5e0;
-            font-size: 14px;
-        }
-        .login-form .checkbox {
-            display: flex;
-            align-items: center;
-            font-size: 12px;
-            color: #8f98a0;
-        }
-        .login-form .checkbox input {
-            width: auto;
-            margin-right: 5px;
-        }
-        .login-form button {
-            width: 100%;
-            padding: 10px;
-            background: #66c0f4;
-            border: none;
-            border-radius: 3px;
-            color: #171a21;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .login-form button:hover {
-            background: #c7d5e0;
-        }
-        .qr-code {
-            width: 40%;
-            text-align: center;
-        }
-        .qr-code img {
-            width: 150px;
-            height: 150px;
-            background: #fff;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .qr-code p {
-            font-size: 12px;
-            color: #8f98a0;
-            margin: 10px 0 0;
-        }
-        .qr-code a {
-            color: #66c0f4;
-            text-decoration: none;
-        }
-        .qr-code a:hover {
-            color: #c7d5e0;
-        }
-        .error {
-            color: #f00;
-            font-size: 12px;
-            margin-top: 10px;
-        }
-        .footer-text {
-            font-size: 12px;
-            color: #8f98a0;
-            margin-top: 20px;
-        }
-        .footer-text a {
-            color: #66c0f4;
-            text-decoration: none;
-        }
-        .footer-text a:hover {
-            color: #c7d5e0;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="login-box">
-            <div class="header">
-                <img src="https://steamcommunity-a.akamaihd.net/public/shared/images/header/logo_steam.svg" alt="Steam Logo">
-                <div class="links">
-                    <a href="#">МАГАЗИН</a>
-                    <a href="#">СООБЩЕСТВО</a>
-                    <a href="#">ИНФОРМАЦИЯ</a>
-                    <a href="#">ПОДДЕРЖКА</a>
-                </div>
-            </div>
-            <h1>ВХОД</h1>
-            <div class="login-methods">
-                <div class="login-form">
-                    <label>ВОЙДИТЕ, ИСПОЛЬЗУЯ ИМЯ АККАУНТА</label>
-                    <input type="text" placeholder="Имя аккаунта">
-                    <label>ПАРОЛЬ</label>
-                    <input type="password" placeholder="Пароль">
-                    <div class="checkbox">
-                        <input type="checkbox" id="remember">
-                        <label for="remember">Запомнить меня</label>
-                    </div>
-                    <button onclick="login()">Войти</button>
-                </div>
-                <div class="qr-code">
-                    <label></label>
-                    <img src="https://via.placeholder.com/150" alt="QR-код для входа">
-                    <p>Используйте мобильное приложение Steam, чтобы войти с помощью QR-кода</p>
-                    <p><a href="#">подробнее</a></p>
-                    <div class="error">Произошёл сбой</div>
-                </div>
-            </div>
-            <div class="footer-text">
-                Проблемы с входом? <a href="#">Я не могу войти в аккаунт</a>
-            </div>
-        </div>
-    </div>
-    <script>
-        function login() {
-            alert("Вход выполнен! (Это симуляция)");
-        }
-    </script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+			<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="theme-color" content="#171a21">
+		<title>Сообщество Steam :: Kapibara</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	
+	
+	<link href="https://community.fastly.steamstatic.com/public/shared/css/motiva_sans.css?v=-yZgCk0Nu7kH&amp;l=russian&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+<link href="https://community.fastly.steamstatic.com/public/shared/css/buttons.css?v=0Ihq-pAoptBq&amp;l=russian&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+<link href="https://community.fastly.steamstatic.com/public/shared/css/shared_global.css?v=NBsQMDw_s-09&amp;l=russian&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+<link href="https://community.fastly.steamstatic.com/public/css/globalv2.css?v=9RV1KkrS040q&amp;l=russian&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+<link href="https://community.fastly.steamstatic.com/public/css/skin_1/modalContent.css?v=WXAusLHclDIt&amp;l=russian&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+<link href="https://community.fastly.steamstatic.com/public/css/skin_1/profilev2.css?v=LtOURcSEaW9g&amp;l=russian&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+<link href="https://community.fastly.steamstatic.com/public/shared/css/motiva_sans.css?v=-yZgCk0Nu7kH&amp;l=russian&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+<link href="https://community.fastly.steamstatic.com/public/css/promo/summer2017/stickers.css?v=Ncr6N09yZIap&amp;l=russian&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+<link href="https://community.fastly.steamstatic.com/public/shared/css/shared_responsive.css?v=JL1e4uQSrVGe&amp;l=russian&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+<link href="https://community.fastly.steamstatic.com/public/css/skin_1/header.css?v=EM4kCu67DNda&amp;l=russian&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+	var __PrototypePreserve=[];
+	__PrototypePreserve[0] = Array.from;
+	__PrototypePreserve[1] = Array.prototype.filter;
+	__PrototypePreserve[2] = Array.prototype.flatMap;
+	__PrototypePreserve[3] = Array.prototype.find;
+	__PrototypePreserve[4] = Array.prototype.some;
+	__PrototypePreserve[5] = Function.prototype.bind;
+	__PrototypePreserve[6] = HTMLElement.prototype.scrollTo;
+</script>
+<script type="text/javascript" src="https://community.fastly.steamstatic.com/public/javascript/prototype-1.7.js?v=npJElBnrEO6W&amp;l=russian&amp;_cdn=fastly"></script>
+<script type="text/javascript">
+	Array.from = __PrototypePreserve[0] || Array.from;
+	Array.prototype.filter = __PrototypePreserve[1] || Array.prototype.filter;
+	Array.prototype.flatMap = __PrototypePreserve[2] || Array.prototype.flatMap;
+	Array.prototype.find = __PrototypePreserve[3] || Array.prototype.find;
+	Array.prototype.some = __PrototypePreserve[4] || Array.prototype.some;
+	Function.prototype.bind = __PrototypePreserve[5] || Function.prototype.bind;
+	HTMLElement.prototype.scrollTo = __PrototypePreserve[6] || HTMLElement.prototype.scrollTo;
+</script>
+<script type="text/javascript">
+	var __ScriptaculousPreserve=[];
+	__ScriptaculousPreserve[0] = Array.from;
+	__ScriptaculousPreserve[1] = Function.prototype.bind;
+	__ScriptaculousPreserve[2] = HTMLElement.prototype.scrollTo;
+</script>
+<script type="text/javascript" src="https://community.fastly.steamstatic.com/public/javascript/scriptaculous/_combined.js?v=pbdAKOcDIgbC&amp;l=russian&amp;_cdn=fastly&amp;load=effects,controls,slider,dragdrop"></script>
+<script type="text/javascript">
+	Array.from = __ScriptaculousPreserve[0] || Array.from;
+	Function.prototype.bind = __ScriptaculousPreserve[1] || Function.prototype.bind;
+	HTMLElement.prototype.scrollTo = __ScriptaculousPreserve[2] || HTMLElement.prototype.scrollTo;
+delete String['__parseStyleElement'];  Prototype.Browser.WebKit = true;</script>
+<script type="text/javascript">VALVE_PUBLIC_PATH = "https:\/\/community.fastly.steamstatic.com\/public\/";</script><script type="text/javascript" src="https://community.fastly.steamstatic.com/public/javascript/global.js?v=15MHoVZcGR_u&amp;l=russian&amp;_cdn=fastly"></script>
+<script type="text/javascript" src="https://community.fastly.steamstatic.com/public/javascript/jquery-1.11.1.min.js?v=gQHVlrK4-jX-&amp;l=russian&amp;_cdn=fastly"></script>
+<script type="text/javascript" src="https://community.fastly.steamstatic.com/public/shared/javascript/tooltip.js?v=4dCbm51EojU9&amp;l=russian&amp;_cdn=fastly"></script>
+<script type="text/javascript" src="https://community.fastly.steamstatic.com/public/shared/javascript/shared_global.js?v=75-roL9fPYqn&amp;l=russian&amp;_cdn=fastly"></script>
+<script type="text/javascript" src="https://community.fastly.steamstatic.com/public/shared/javascript/auth_refresh.js?v=w6QbwI-5-j2S&amp;l=russian&amp;_cdn=fastly"></script>
+<script type="text/javascript">Object.seal && [ Object, Array, String, Number ].map( function( builtin ) { Object.seal( builtin.prototype ); } );</script><script type="text/javascript">$J = jQuery.noConflict();
+if ( typeof JSON != 'object' || !JSON.stringify || !JSON.parse ) { document.write( "<scr" + "ipt type=\"text\/javascript\" src=\"https:\/\/community.fastly.steamstatic.com\/public\/javascript\/json2.js?v=54NKNglvGTO8&amp;l=russian&amp;_cdn=fastly\"><\/script>\n" ); };
+</script>
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function(event) {
+				SetupTooltips( { tooltipCSSClass: 'community_tooltip'} );
+		});
+		</script><script type="text/javascript" src="https://community.fastly.steamstatic.com/public/javascript/modalContent.js?v=a79Z5PDaLpG6&amp;l=russian&amp;_cdn=fastly"></script>
+<script type="text/javascript" src="https://community.fastly.steamstatic.com/public/javascript/modalv2.js?v=zBXEuexVQ0FZ&amp;l=russian&amp;_cdn=fastly"></script>
+<script type="text/javascript" src="https://community.fastly.steamstatic.com/public/javascript/profile.js?v=A245d3JmwJ1p&amp;l=russian&amp;_cdn=fastly"></script>
+<script type="text/javascript" src="https://community.fastly.steamstatic.com/public/javascript/promo/stickers.js?v=CbovKrSPKBbn&amp;l=russian&amp;_cdn=fastly"></script>
+<script type="text/javascript" src="https://community.fastly.steamstatic.com/public/javascript/reportedcontent.js?v=-lZqrarogJr8&amp;l=russian&amp;_cdn=fastly"></script>
+<script type="text/javascript" src="https://community.fastly.steamstatic.com/public/javascript/webui/clientcom.js?v=FqsMni215Pqw&amp;l=russian&amp;_cdn=fastly"></script>
+<script type="text/javascript" src="https://community.fastly.steamstatic.com/public/shared/javascript/shared_responsive_adapter.js?v=TDbSaAEkbTKK&amp;l=russian&amp;_cdn=fastly"></script>
+
+						<meta name="twitter:card" content="summary">
+					<meta name="Description" content="ːsteamthumbsdownː Информация отсуствует.">
+			
+	<meta name="twitter:site" content="@steam" />
+
+						<meta property="og:title" content="Сообщество Steam :: Kapibara">
+					<meta property="twitter:title" content="Сообщество Steam :: Kapibara">
+					<meta property="og:type" content="website">
+					<meta property="fb:app_id" content="105386699540688">
+					<meta property="og:description" content="ːsteamthumbsdownː Информация отсуствует.">
+					<meta property="twitter:description" content="ːsteamthumbsdownː Информация отсуствует.">
+			
+	
+			<link rel="image_src" href="https://avatars.fastly.steamstatic.com/8585fedd5846b8c5e863a9916209e12df585e495_full.jpg">
+		<meta property="og:image" content="https://avatars.fastly.steamstatic.com/8585fedd5846b8c5e863a9916209e12df585e495_full.jpg">
+		<meta name="twitter:image" content="https://avatars.fastly.steamstatic.com/8585fedd5846b8c5e863a9916209e12df585e495_full.jpg" />
+				
+	
+	
+	
+	
+	</head>
+<body class="flat_page profile_page  SummerTheme responsive_page ">
+
+
+<div class="responsive_page_frame with_header">
+						<div role="navigation" class="responsive_page_menu_ctn mainmenu" aria-label="Мобильное меню">
+				<div class="responsive_page_menu"  id="responsive_page_menu">
+										<div class="mainmenu_contents">
+						<div class="mainmenu_contents_items">
+															<!-- profile area -->
+								<div class="responsive_menu_user_area">
+									<div class="responsive_menu_user_persona persona offline">
+										<div class="playerAvatar offline">
+											<a href="https://steamcommunity.com/profiles/76561199818032984/" aria-label="Открыть профиль">
+												<img src="https://avatars.fastly.steamstatic.com/91123156311ddb94d8fe136763a57d82a47a8638.jpg" srcset="https://avatars.fastly.steamstatic.com/91123156311ddb94d8fe136763a57d82a47a8638.jpg 1x, https://avatars.fastly.steamstatic.com/91123156311ddb94d8fe136763a57d82a47a8638_medium.jpg 2x" alt="kapi-bara | yooma.su">											</a>
+										</div>
+										<a href="https://steamcommunity.com/profiles/76561199818032984/" data-miniprofile="1857767256">kapi-bara | yooma.su</a>									</div>
+
+																										</div>
+
+																									<div class="menuitem notifications_item">
+										Уведомления										<div class="notification_count_total_ctn has_notifications">
+											<span class="notification_envelope"></span>
+											<span class="notification_count">1</span>
+										</div>
+									</div>
+									<div class="notification_submenu" style="display: none;" data-submenuid="notifications">
+										<div  data-featuretarget="green-envelope-responsive"></div>									</div>
+																<a class="menuitem supernav" href="https://store.steampowered.com/" data-tooltip-type="selector" data-tooltip-content=".submenu_Store">
+				Магазин			</a>
+			<div class="submenu_Store" style="display: none;" data-submenuid="Store">
+														<a class="submenuitem" href="https://store.steampowered.com/">
+						Главная											</a>
+														<a class="submenuitem" href="https://store.steampowered.com/explore/">
+						Рекомендации											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/my/wishlist/">
+						Список желаемого											</a>
+														<a class="submenuitem" href="https://store.steampowered.com/points/shop/">
+						Предметы за очки											</a>
+														<a class="submenuitem" href="https://store.steampowered.com/news/">
+						Новости											</a>
+														<a class="submenuitem" href="https://store.steampowered.com/stats/">
+						Статистика											</a>
+														<a class="submenuitem" href="https://store.steampowered.com/about/">
+						Информация											</a>
+							</div>
+										<a class="menuitem supernav supernav_active" href="https://steamcommunity.com/" data-tooltip-type="selector" data-tooltip-content=".submenu_Community">
+				Сообщество			</a>
+			<div class="submenu_Community" style="display: none;" data-submenuid="Community">
+														<a class="submenuitem" href="https://steamcommunity.com/">
+						Главная											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/discussions/">
+						Обсуждения											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/workshop/">
+						Мастерская											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/market/">
+						Торговая площадка											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/?subsection=broadcasts">
+						Трансляции											</a>
+							</div>
+										<a class="menuitem supernav username" href="https://steamcommunity.com/my/" data-tooltip-type="selector" data-tooltip-content=".submenu_Profile">
+				Вы и друзья			</a>
+			<div class="submenu_Profile" style="display: none;" data-submenuid="Profile">
+														<a class="submenuitem" href="https://steamcommunity.com/my/home/">
+						Активность											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/my/">
+						Профиль											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/my/friends/">
+						Друзья											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/my/games/">
+						Игры											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/my/groups/">
+						Группы											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/my/screenshots/">
+						Контент											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/my/badges/">
+						Значки											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/my/inventory/">
+						Инвентарь											</a>
+														<a class="submenuitem" href="https://store.steampowered.com/yearinreview/">
+						Итоги Steam											</a>
+							</div>
+										<a class="menuitem " href="https://steamcommunity.com/chat/">
+				Чат			</a>
+										<a class="menuitem " href="https://help.steampowered.com/ru/">
+				Поддержка			</a>
+			
+							<div class="minor_menu_items">
+																	<a class="menuitem" href="https://store.steampowered.com/account/">Об аккаунте</a>
+									<a class="menuitem" href="https://store.steampowered.com/account/preferences">Настройки магазина</a>
+																								<div class="menuitem change_language_action">
+									Изменить язык								</div>
+																									<div class="menuitem" onclick="Logout();">Сменить пользователя</div>
+																									<a class="menuitem" href="https://store.steampowered.com/mobile" target="_blank" rel="noreferrer">Скачать мобильное приложение Steam</a>
+																									<div class="menuitem" onclick="Responsive_RequestDesktopView();">
+										Полная версия									</div>
+															</div>
+						</div>
+						<div class="mainmenu_footer_spacer  "></div>
+						<div class="mainmenu_footer">
+															<div class="mainmenu_footer_logo"><img src="https://community.fastly.steamstatic.com/public/shared/images/responsive/logo_valve_footer.png"></div>
+								© Valve Corporation. Все права сохранены. Все торговые марки являются собственностью соответствующих владельцев в США и других странах.								<span class="mainmenu_valve_links">
+									<a href="https://store.steampowered.com/privacy_agreement/" target="_blank">Политика конфиденциальности</a>
+									&nbsp;| &nbsp;<a href="http://www.valvesoftware.com/legal.htm" target="_blank">Правовая информация</a>
+									&nbsp;| &nbsp;<a href="https://store.steampowered.com/subscriber_agreement/" target="_blank">Соглашение подписчика Steam</a>
+									&nbsp;| &nbsp;<a href="https://store.steampowered.com/steam_refunds/" target="_blank">Возврат средств</a>
+								</span>
+													</div>
+					</div>
+									</div>
+			</div>
+		
+		<div class="responsive_local_menu_tab"></div>
+
+		<div class="responsive_page_menu_ctn localmenu">
+			<div class="responsive_page_menu"  id="responsive_page_local_menu" data-panel="{&quot;onOptionsActionDescription&quot;:&quot;#filter_toggle&quot;,&quot;onOptionsButton&quot;:&quot;Responsive_ToggleLocalMenu()&quot;,&quot;onCancelButton&quot;:&quot;Responsive_ToggleLocalMenu()&quot;}">
+				<div class="localmenu_content" data-panel="{&quot;maintainY&quot;:true,&quot;bFocusRingRoot&quot;:true,&quot;flow-children&quot;:&quot;column&quot;}">
+				</div>
+			</div>
+		</div>
+
+
+
+					<div class="responsive_header">
+				<div class="responsive_header_content">
+					<div id="responsive_menu_logo">
+						<img src="https://community.fastly.steamstatic.com/public/shared/images/responsive/header_menu_hamburger.png" height="100%">
+													<div class="responsive_header_notification_badge_ctn">
+								<div class="responsive_header_notification_badge notification_count_total_ctn has_notifications">
+									<span class="notification_count">1</span>
+								</div>
+							</div>
+											</div>
+					<div class="responsive_header_logo">
+						<a href="https://store.steampowered.com/">
+															<img src="https://community.fastly.steamstatic.com/public/shared/images/responsive/header_logo.png" height="36" border="0" alt="STEAM">
+													</a>
+					</div>
+				</div>
+			</div>
+		
+		<div class="responsive_page_content_overlay">
+
+		</div>
+
+		<div class="responsive_fixonscroll_ctn nonresponsive_hidden ">
+		</div>
+	
+	<div class="responsive_page_content">
+
+		<div role="banner" id="global_header" data-panel="{&quot;flow-children&quot;:&quot;row&quot;}">
+	<div class="content">
+		<div class="logo">
+			<span id="logo_holder">
+									<a href="https://store.steampowered.com/" aria-label="Ссылка на домашнюю страницу Steam">
+						<img src="https://community.fastly.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" width="176" height="44" alt="Ссылка на домашнюю страницу Steam">
+					</a>
+							</span>
+		</div>
+
+			<div role="navigation" class="supernav_container" aria-label="Глобальное меню">
+								<a class="menuitem supernav" href="https://store.steampowered.com/" data-tooltip-type="selector" data-tooltip-content=".submenu_Store">
+				МАГАЗИН			</a>
+			<div class="submenu_Store" style="display: none;" data-submenuid="Store">
+														<a class="submenuitem" href="https://store.steampowered.com/">
+						Главная											</a>
+														<a class="submenuitem" href="https://store.steampowered.com/explore/">
+						Рекомендации											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/my/wishlist/">
+						Список желаемого											</a>
+														<a class="submenuitem" href="https://store.steampowered.com/points/shop/">
+						Предметы за очки											</a>
+														<a class="submenuitem" href="https://store.steampowered.com/news/">
+						Новости											</a>
+														<a class="submenuitem" href="https://store.steampowered.com/stats/">
+						Статистика											</a>
+														<a class="submenuitem" href="https://store.steampowered.com/about/">
+						Информация											</a>
+							</div>
+										<a class="menuitem supernav supernav_active" href="https://steamcommunity.com/" data-tooltip-type="selector" data-tooltip-content=".submenu_Community">
+				СООБЩЕСТВО			</a>
+			<div class="submenu_Community" style="display: none;" data-submenuid="Community">
+														<a class="submenuitem" href="https://steamcommunity.com/">
+						Главная											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/discussions/">
+						Обсуждения											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/workshop/">
+						Мастерская											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/market/">
+						Торговая площадка											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/?subsection=broadcasts">
+						Трансляции											</a>
+							</div>
+										<a class="menuitem supernav username" href="https://steamcommunity.com/my/" data-tooltip-type="selector" data-tooltip-content=".submenu_Profile">
+				kapi-bara | yooma.su			</a>
+			<div class="submenu_Profile" style="display: none;" data-submenuid="Profile">
+														<a class="submenuitem" href="https://steamcommunity.com/my/home/">
+						Активность											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/my/">
+						Профиль											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/my/friends/">
+						Друзья											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/my/games/">
+						Игры											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/my/groups/">
+						Группы											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/my/screenshots/">
+						Контент											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/my/badges/">
+						Значки											</a>
+														<a class="submenuitem" href="https://steamcommunity.com/my/inventory/">
+						Инвентарь											</a>
+														<a class="submenuitem" href="https://store.steampowered.com/yearinreview/">
+						Итоги Steam											</a>
+							</div>
+										<a class="menuitem " href="https://steamcommunity.com/chat/">
+				Чат			</a>
+										<a class="menuitem " href="https://help.steampowered.com/ru/">
+				ПОДДЕРЖКА			</a>
+				</div>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$('#global_header .supernav').v_tooltip({'location':'bottom', 'destroyWhenDone': false, 'tooltipClass': 'supernav_content', 'offsetY':-6, 'offsetX': 1, 'horizontalSnap': 4, 'tooltipParent': '#global_header .supernav_container', 'correctForScreenSize': false});
+		});
+	</script>
+
+		<div id="global_actions">
+			<div role="navigation" id="global_action_menu" aria-label="Меню аккаунта">
+									<a class="header_installsteam_btn header_installsteam_btn_gray" href="https://store.steampowered.com/about/">
+						<div class="header_installsteam_btn_content">
+							Установить Steam						</div>
+					</a>
+				
+				
+										<!-- notification inbox area -->
+																								<div id="header_notification_area" style="position:relative">
+							<div  data-featuretarget="green-envelope"></div><script type="text/javascript">$J( EnableNotificationCountPolling );</script>			<div id="header_notification_link" class="header_notification_btn global_header_toggle_button header_notification_bell"></div>
+									</div>
+					<button class="pulldown global_action_link persona_name_text_content" id="account_pulldown" onclick="ShowMenu( this, 'account_dropdown', 'right', 'bottom', true );">
+						kapi-bara | yooma.su					</button>
+					<div class="popup_block_new" id="account_dropdown" style="display: none;">
+						<div class="popup_body popup_menu">
+															<a class="popup_menu_item" href="https://steamcommunity.com/profiles/76561199818032984/">Мой профиль</a>
+								<a class="popup_menu_item" href="https://store.steampowered.com/account/">Об аккаунте: <span class="account_name">kapibara_42</span></a>
+																						<a class="popup_menu_item" href="https://store.steampowered.com/account/preferences/">Настройки магазина</a>
+															
+															<span class="popup_menu_item" id="account_language_pulldown">Изменить язык</span>
+								<div class="popup_block_new" id="language_dropdown" style="display: none;">
+									<div class="popup_body popup_menu">
+																																													<a class="popup_menu_item tight" href="?l=schinese" onclick="ChangeLanguage( 'schinese' ); return false;">简体中文 (упрощенный китайский)</a>
+																																			<a class="popup_menu_item tight" href="?l=tchinese" onclick="ChangeLanguage( 'tchinese' ); return false;">繁體中文 (традиционный китайский)</a>
+																																			<a class="popup_menu_item tight" href="?l=japanese" onclick="ChangeLanguage( 'japanese' ); return false;">日本語 (японский)</a>
+																																			<a class="popup_menu_item tight" href="?l=koreana" onclick="ChangeLanguage( 'koreana' ); return false;">한국어 (корейский)</a>
+																																			<a class="popup_menu_item tight" href="?l=thai" onclick="ChangeLanguage( 'thai' ); return false;">ไทย (тайский)</a>
+																																			<a class="popup_menu_item tight" href="?l=bulgarian" onclick="ChangeLanguage( 'bulgarian' ); return false;">Български (болгарский)</a>
+																																			<a class="popup_menu_item tight" href="?l=czech" onclick="ChangeLanguage( 'czech' ); return false;">Čeština (чешский)</a>
+																																			<a class="popup_menu_item tight" href="?l=danish" onclick="ChangeLanguage( 'danish' ); return false;">Dansk (датский)</a>
+																																			<a class="popup_menu_item tight" href="?l=german" onclick="ChangeLanguage( 'german' ); return false;">Deutsch (немецкий)</a>
+																																			<a class="popup_menu_item tight" href="?l=english" onclick="ChangeLanguage( 'english' ); return false;">English (английский)</a>
+																																			<a class="popup_menu_item tight" href="?l=spanish" onclick="ChangeLanguage( 'spanish' ); return false;">Español - España (испанский)</a>
+																																			<a class="popup_menu_item tight" href="?l=latam" onclick="ChangeLanguage( 'latam' ); return false;">Español - Latinoamérica (латиноам. испанский)</a>
+																																			<a class="popup_menu_item tight" href="?l=greek" onclick="ChangeLanguage( 'greek' ); return false;">Ελληνικά (греческий)</a>
+																																			<a class="popup_menu_item tight" href="?l=french" onclick="ChangeLanguage( 'french' ); return false;">Français (французский)</a>
+																																			<a class="popup_menu_item tight" href="?l=italian" onclick="ChangeLanguage( 'italian' ); return false;">Italiano (итальянский)</a>
+																																			<a class="popup_menu_item tight" href="?l=indonesian" onclick="ChangeLanguage( 'indonesian' ); return false;">Bahasa Indonesia (индонезийский)</a>
+																																			<a class="popup_menu_item tight" href="?l=hungarian" onclick="ChangeLanguage( 'hungarian' ); return false;">Magyar (венгерский)</a>
+																																			<a class="popup_menu_item tight" href="?l=dutch" onclick="ChangeLanguage( 'dutch' ); return false;">Nederlands (нидерландский)</a>
+																																			<a class="popup_menu_item tight" href="?l=norwegian" onclick="ChangeLanguage( 'norwegian' ); return false;">Norsk (норвежский)</a>
+																																			<a class="popup_menu_item tight" href="?l=polish" onclick="ChangeLanguage( 'polish' ); return false;">Polski (польский)</a>
+																																			<a class="popup_menu_item tight" href="?l=portuguese" onclick="ChangeLanguage( 'portuguese' ); return false;">Português (португальский)</a>
+																																			<a class="popup_menu_item tight" href="?l=brazilian" onclick="ChangeLanguage( 'brazilian' ); return false;">Português-Brasil (бразильский португальский)</a>
+																																			<a class="popup_menu_item tight" href="?l=romanian" onclick="ChangeLanguage( 'romanian' ); return false;">Română (румынский)</a>
+																																			<a class="popup_menu_item tight" href="?l=russian" onclick="ChangeLanguage( 'russian' ); return false;">Русский (Russian)</a>
+																																			<a class="popup_menu_item tight" href="?l=finnish" onclick="ChangeLanguage( 'finnish' ); return false;">Suomi (финский)</a>
+																																			<a class="popup_menu_item tight" href="?l=swedish" onclick="ChangeLanguage( 'swedish' ); return false;">Svenska (шведский)</a>
+																																			<a class="popup_menu_item tight" href="?l=turkish" onclick="ChangeLanguage( 'turkish' ); return false;">Türkçe (турецкий)</a>
+																																			<a class="popup_menu_item tight" href="?l=vietnamese" onclick="ChangeLanguage( 'vietnamese' ); return false;">Tiếng Việt (вьетнамский)</a>
+																																			<a class="popup_menu_item tight" href="?l=ukrainian" onclick="ChangeLanguage( 'ukrainian' ); return false;">Українська (украинский)</a>
+																															<a class="popup_menu_item tight" href="https://www.valvesoftware.com/en/contact?contact-person=Translation%20Team%20Feedback" target="_blank">
+											Сообщить о проблеме с переводом										</a>
+									</div>
+								</div>
+							
+															<a class="popup_menu_item" href="javascript:Logout();">Выйти из аккаунта...</a>
+													</div>
+					</div>
+					<script type="text/javascript">
+						RegisterFlyout( 'account_language_pulldown', 'language_dropdown', 'leftsubmenu', 'bottomsubmenu', true );
+					</script>
+												</div>
+							<a href="https://steamcommunity.com/profiles/76561199818032984/" class="user_avatar playerAvatar offline" aria-label="Открыть профиль">
+					<img src="https://avatars.fastly.steamstatic.com/91123156311ddb94d8fe136763a57d82a47a8638.jpg" alt="kapi-bara | yooma.su">
+				</a>
+					</div>
+			</div>
+</div>
+<script type="text/javascript">
+	g_sessionID = "0c18e3480fdd70c7c91a8a50";
+	g_steamID = "76561199818032984";
+	g_strLanguage = "russian";
+	g_SNR = '2_100300_profile_';
+	g_bAllowAppImpressions = true;
+		g_ContentDescriptorPreferences = [1,3,4];
+
+	
+
+	// We always want to have the timezone cookie set for PHP to use
+	setTimezoneCookies();
+
+	$J( function() {
+
+		InitMiniprofileHovers(( 'https%3A%2F%2Fsteamcommunity.com' ));
+		InitEmoticonHovers();
+		ApplyAdultContentPreferences();
+	});
+
+	$J( function() { InitEconomyHovers( "https:\/\/community.fastly.steamstatic.com\/public\/css\/skin_1\/economy.css?v=VKAgK8uSsc-w&l=russian&_cdn=fastly", "https:\/\/community.fastly.steamstatic.com\/public\/javascript\/economy_common.js?v=GYFVZLtXyAJC&l=russian&_cdn=fastly", "https:\/\/community.fastly.steamstatic.com\/public\/javascript\/economy.js?v=CQQeIeAPURGs&l=russian&_cdn=fastly" );});</script>
+	<div id="webui_config" style="display: none;"
+		 data-config="{&quot;EUNIVERSE&quot;:1,&quot;WEB_UNIVERSE&quot;:&quot;public&quot;,&quot;LANGUAGE&quot;:&quot;russian&quot;,&quot;COUNTRY&quot;:&quot;UA&quot;,&quot;MEDIA_CDN_COMMUNITY_URL&quot;:&quot;https:\/\/cdn.fastly.steamstatic.com\/steamcommunity\/public\/&quot;,&quot;MEDIA_CDN_URL&quot;:&quot;https:\/\/cdn.fastly.steamstatic.com\/&quot;,&quot;VIDEO_CDN_URL&quot;:&quot;https:\/\/video.fastly.steamstatic.com\/&quot;,&quot;COMMUNITY_CDN_URL&quot;:&quot;https:\/\/community.fastly.steamstatic.com\/&quot;,&quot;COMMUNITY_CDN_ASSET_URL&quot;:&quot;https:\/\/cdn.fastly.steamstatic.com\/steamcommunity\/public\/assets\/&quot;,&quot;STORE_CDN_URL&quot;:&quot;https:\/\/store.fastly.steamstatic.com\/&quot;,&quot;PUBLIC_SHARED_URL&quot;:&quot;https:\/\/community.fastly.steamstatic.com\/public\/shared\/&quot;,&quot;COMMUNITY_BASE_URL&quot;:&quot;https:\/\/steamcommunity.com\/&quot;,&quot;CHAT_BASE_URL&quot;:&quot;https:\/\/steamcommunity.com\/&quot;,&quot;STORE_BASE_URL&quot;:&quot;https:\/\/store.steampowered.com\/&quot;,&quot;STORE_CHECKOUT_BASE_URL&quot;:&quot;https:\/\/checkout.steampowered.com\/&quot;,&quot;IMG_URL&quot;:&quot;https:\/\/community.fastly.steamstatic.com\/public\/images\/&quot;,&quot;STEAMTV_BASE_URL&quot;:&quot;https:\/\/steam.tv\/&quot;,&quot;HELP_BASE_URL&quot;:&quot;https:\/\/help.steampowered.com\/&quot;,&quot;PARTNER_BASE_URL&quot;:&quot;https:\/\/partner.steamgames.com\/&quot;,&quot;STATS_BASE_URL&quot;:&quot;https:\/\/partner.steampowered.com\/&quot;,&quot;INTERNAL_STATS_BASE_URL&quot;:&quot;https:\/\/steamstats.valve.org\/&quot;,&quot;IN_CLIENT&quot;:false,&quot;USE_POPUPS&quot;:false,&quot;STORE_ICON_BASE_URL&quot;:&quot;https:\/\/shared.fastly.steamstatic.com\/store_item_assets\/steam\/apps\/&quot;,&quot;STORE_ITEM_BASE_URL&quot;:&quot;https:\/\/shared.fastly.steamstatic.com\/store_item_assets\/&quot;,&quot;WEBAPI_BASE_URL&quot;:&quot;https:\/\/api.steampowered.com\/&quot;,&quot;TOKEN_URL&quot;:&quot;https:\/\/steamcommunity.com\/chat\/clientjstoken&quot;,&quot;BUILD_TIMESTAMP&quot;:1747958183,&quot;PAGE_TIMESTAMP&quot;:1748027682,&quot;IN_TENFOOT&quot;:false,&quot;IN_GAMEPADUI&quot;:false,&quot;IN_CHROMEOS&quot;:false,&quot;IN_MOBILE_WEBVIEW&quot;:false,&quot;PLATFORM&quot;:&quot;windows&quot;,&quot;BASE_URL_STORE_CDN_ASSETS&quot;:&quot;https:\/\/cdn.fastly.steamstatic.com\/store\/&quot;,&quot;EREALM&quot;:1,&quot;LOGIN_BASE_URL&quot;:&quot;https:\/\/login.steampowered.com\/&quot;,&quot;AVATAR_BASE_URL&quot;:&quot;https:\/\/avatars.fastly.steamstatic.com\/&quot;,&quot;FROM_WEB&quot;:true,&quot;WEBSITE_ID&quot;:&quot;Community&quot;,&quot;BASE_URL_SHARED_CDN&quot;:&quot;https:\/\/shared.fastly.steamstatic.com\/&quot;,&quot;CLAN_CDN_ASSET_URL&quot;:&quot;https:\/\/clan.fastly.steamstatic.com\/&quot;,&quot;SNR&quot;:&quot;2_100300_profile_&quot;}"
+		 data-userinfo="{&quot;logged_in&quot;:true,&quot;steamid&quot;:&quot;76561199818032984&quot;,&quot;accountid&quot;:1857767256,&quot;account_name&quot;:&quot;kapibara_42&quot;,&quot;is_support&quot;:false,&quot;is_limited&quot;:true,&quot;is_partner_member&quot;:false,&quot;country_code&quot;:&quot;UA&quot;,&quot;excluded_content_descriptors&quot;:[1,3,4]}">
+	</div>
+<script>window.g_wapit="eyAidHlwIjogIkpXVCIsICJhbGciOiAiRWREU0EiIH0.eyAiaXNzIjogInI6MDAxMl8yNjU2QTU0RV81RDNBQiIsICJzdWIiOiAiNzY1NjExOTk4MTgwMzI5ODQiLCAiYXVkIjogWyAid2ViOmNvbW11bml0eSIgXSwgImV4cCI6IDE3NDgxMDc2NjYsICJuYmYiOiAxNzM5MzgxMDU4LCAiaWF0IjogMTc0ODAyMTA1OCwgImp0aSI6ICIwMDA3XzI2NTZBNTU4XzlGOUQ3IiwgIm9hdCI6IDE3NDgwMjEwNTgsICJydF9leHAiOiAxNzY1OTc2NTUyLCAicGVyIjogMCwgImlwX3N1YmplY3QiOiAiMzEuMTMxLjExMy4xMzQiLCAiaXBfY29uZmlybWVyIjogIjMxLjEzMS4xMTMuMTM0IiB9.hAJd3Xp6NF3fs0dp5O8xm4FdAAQq415aMyA8_ZeslvrQfUjvSbn0XlrV1-AzJb7KoAO14tQL0Rh1m1Ta8vUfCg";</script><div id="application_config" style="display: none;"  data-config="{&quot;EUNIVERSE&quot;:1,&quot;WEB_UNIVERSE&quot;:&quot;public&quot;,&quot;LANGUAGE&quot;:&quot;russian&quot;,&quot;COUNTRY&quot;:&quot;UA&quot;,&quot;MEDIA_CDN_COMMUNITY_URL&quot;:&quot;https:\/\/cdn.fastly.steamstatic.com\/steamcommunity\/public\/&quot;,&quot;MEDIA_CDN_URL&quot;:&quot;https:\/\/cdn.fastly.steamstatic.com\/&quot;,&quot;VIDEO_CDN_URL&quot;:&quot;https:\/\/video.fastly.steamstatic.com\/&quot;,&quot;COMMUNITY_CDN_URL&quot;:&quot;https:\/\/community.fastly.steamstatic.com\/&quot;,&quot;COMMUNITY_CDN_ASSET_URL&quot;:&quot;https:\/\/cdn.fastly.steamstatic.com\/steamcommunity\/public\/assets\/&quot;,&quot;STORE_CDN_URL&quot;:&quot;https:\/\/store.fastly.steamstatic.com\/&quot;,&quot;PUBLIC_SHARED_URL&quot;:&quot;https:\/\/community.fastly.steamstatic.com\/public\/shared\/&quot;,&quot;COMMUNITY_BASE_URL&quot;:&quot;https:\/\/steamcommunity.com\/&quot;,&quot;CHAT_BASE_URL&quot;:&quot;https:\/\/steamcommunity.com\/&quot;,&quot;STORE_BASE_URL&quot;:&quot;https:\/\/store.steampowered.com\/&quot;,&quot;STORE_CHECKOUT_BASE_URL&quot;:&quot;https:\/\/checkout.steampowered.com\/&quot;,&quot;IMG_URL&quot;:&quot;https:\/\/community.fastly.steamstatic.com\/public\/images\/&quot;,&quot;STEAMTV_BASE_URL&quot;:&quot;https:\/\/steam.tv\/&quot;,&quot;HELP_BASE_URL&quot;:&quot;https:\/\/help.steampowered.com\/&quot;,&quot;PARTNER_BASE_URL&quot;:&quot;https:\/\/partner.steamgames.com\/&quot;,&quot;STATS_BASE_URL&quot;:&quot;https:\/\/partner.steampowered.com\/&quot;,&quot;INTERNAL_STATS_BASE_URL&quot;:&quot;https:\/\/steamstats.valve.org\/&quot;,&quot;IN_CLIENT&quot;:false,&quot;USE_POPUPS&quot;:false,&quot;STORE_ICON_BASE_URL&quot;:&quot;https:\/\/shared.fastly.steamstatic.com\/store_item_assets\/steam\/apps\/&quot;,&quot;STORE_ITEM_BASE_URL&quot;:&quot;https:\/\/shared.fastly.steamstatic.com\/store_item_assets\/&quot;,&quot;WEBAPI_BASE_URL&quot;:&quot;https:\/\/api.steampowered.com\/&quot;,&quot;TOKEN_URL&quot;:&quot;https:\/\/steamcommunity.com\/chat\/clientjstoken&quot;,&quot;BUILD_TIMESTAMP&quot;:1747958183,&quot;PAGE_TIMESTAMP&quot;:1748027682,&quot;IN_TENFOOT&quot;:false,&quot;IN_GAMEPADUI&quot;:false,&quot;IN_CHROMEOS&quot;:false,&quot;IN_MOBILE_WEBVIEW&quot;:false,&quot;PLATFORM&quot;:&quot;windows&quot;,&quot;BASE_URL_STORE_CDN_ASSETS&quot;:&quot;https:\/\/cdn.fastly.steamstatic.com\/store\/&quot;,&quot;EREALM&quot;:1,&quot;LOGIN_BASE_URL&quot;:&quot;https:\/\/login.steampowered.com\/&quot;,&quot;AVATAR_BASE_URL&quot;:&quot;https:\/\/avatars.fastly.steamstatic.com\/&quot;,&quot;FROM_WEB&quot;:true,&quot;WEBSITE_ID&quot;:&quot;Community&quot;,&quot;BASE_URL_SHARED_CDN&quot;:&quot;https:\/\/shared.fastly.steamstatic.com\/&quot;,&quot;CLAN_CDN_ASSET_URL&quot;:&quot;https:\/\/clan.fastly.steamstatic.com\/&quot;,&quot;SNR&quot;:&quot;2_100300_profile_&quot;}" data-userinfo="{&quot;logged_in&quot;:true,&quot;steamid&quot;:&quot;76561199818032984&quot;,&quot;accountid&quot;:1857767256,&quot;account_name&quot;:&quot;kapibara_42&quot;,&quot;is_support&quot;:false,&quot;is_limited&quot;:true,&quot;is_partner_member&quot;:false,&quot;country_code&quot;:&quot;UA&quot;,&quot;excluded_content_descriptors&quot;:[1,3,4]}" data-community="[]" data-loyaltystore="{&quot;webapi_token&quot;:&quot;eyAidHlwIjogIkpXVCIsICJhbGciOiAiRWREU0EiIH0.eyAiaXNzIjogInI6MDAxMl8yNjU2QTU0RV81RDNBQiIsICJzdWIiOiAiNzY1NjExOTk4MTgwMzI5ODQiLCAiYXVkIjogWyAid2ViOmNvbW11bml0eSIgXSwgImV4cCI6IDE3NDgxMDc2NjYsICJuYmYiOiAxNzM5MzgxMDU4LCAiaWF0IjogMTc0ODAyMTA1OCwgImp0aSI6ICIwMDA3XzI2NTZBNTU4XzlGOUQ3IiwgIm9hdCI6IDE3NDgwMjEwNTgsICJydF9leHAiOiAxNzY1OTc2NTUyLCAicGVyIjogMCwgImlwX3N1YmplY3QiOiAiMzEuMTMxLjExMy4xMzQiLCAiaXBfY29uZmlybWVyIjogIjMxLjEzMS4xMTMuMTM0IiB9.hAJd3Xp6NF3fs0dp5O8xm4FdAAQq415aMyA8_ZeslvrQfUjvSbn0XlrV1-AzJb7KoAO14tQL0Rh1m1Ta8vUfCg&quot;}" data-loyalty_webapi_token="&quot;eyAidHlwIjogIkpXVCIsICJhbGciOiAiRWREU0EiIH0.eyAiaXNzIjogInI6MDAxMl8yNjU2QTU0RV81RDNBQiIsICJzdWIiOiAiNzY1NjExOTk4MTgwMzI5ODQiLCAiYXVkIjogWyAid2ViOmNvbW11bml0eSIgXSwgImV4cCI6IDE3NDgxMDc2NjYsICJuYmYiOiAxNzM5MzgxMDU4LCAiaWF0IjogMTc0ODAyMTA1OCwgImp0aSI6ICIwMDA3XzI2NTZBNTU4XzlGOUQ3IiwgIm9hdCI6IDE3NDgwMjEwNTgsICJydF9leHAiOiAxNzY1OTc2NTUyLCAicGVyIjogMCwgImlwX3N1YmplY3QiOiAiMzEuMTMxLjExMy4xMzQiLCAiaXBfY29uZmlybWVyIjogIjMxLjEzMS4xMTMuMTM0IiB9.hAJd3Xp6NF3fs0dp5O8xm4FdAAQq415aMyA8_ZeslvrQfUjvSbn0XlrV1-AzJb7KoAO14tQL0Rh1m1Ta8vUfCg&quot;" data-steam_notifications="{&quot;notifications&quot;:[{&quot;notification_id&quot;:&quot;104271738029&quot;,&quot;notification_targets&quot;:3,&quot;notification_type&quot;:4,&quot;body_data&quot;:&quot;{\&quot;app_id\&quot;:480,\&quot;context_id\&quot;:\&quot;2\&quot;,\&quot;asset_id\&quot;:\&quot;608659138106006284\&quot;,\&quot;source_appid\&quot;:0}&quot;,&quot;read&quot;:0,&quot;timestamp&quot;:1746630734,&quot;hidden&quot;:0,&quot;expiry&quot;:0,&quot;viewed&quot;:0}],&quot;pending_gift_count&quot;:0,&quot;pending_friend_count&quot;:0,&quot;unread_count&quot;:1,&quot;pending_family_invite_count&quot;:0,&quot;success&quot;:1,&quot;rwgrsn&quot;:-2}"></div><link href="https://community.fastly.steamstatic.com/public/css/applications/community/main.css?v=0GyKoCAhtgV3&amp;l=russian&amp;_cdn=fastly" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://community.fastly.steamstatic.com/public/javascript/applications/community/manifest.js?v=JTPHouKRrpS5&amp;l=russian&amp;_cdn=fastly"></script>
+<script type="text/javascript" src="https://community.fastly.steamstatic.com/public/javascript/applications/community/libraries~b28b7af69.js?v=mulEPWRL_JJh&amp;l=russian&amp;_cdn=fastly"></script>
+<script type="text/javascript" src="https://community.fastly.steamstatic.com/public/javascript/applications/community/main.js?v=7WDZUPhXeY63&amp;l=russian&amp;_cdn=fastly"></script>
+<div data-featuretarget="profile-rewards"></div>	<div id="application_root"></div>
+
+		<div role="main" class="responsive_page_template_content" id="responsive_page_template_content" data-panel="{&quot;autoFocus&quot;:true}" >
+
+				<script type="text/javascript">
+		g_rgProfileData = {"url":"https:\/\/steamcommunity.com\/id\/Kapibara-China\/","steamid":"76561199805054207","personaname":"Kapibara","summary":"<img src=\"https:\/\/community.fastly.steamstatic.com\/economy\/emoticon\/steamthumbsdown\" alt=\":steamthumbsdown:\" class=\"emoticon\"> Информация отсуствует."};
+		const g_bViewingOwnProfile = 0;
+		$J( function() {
+			window.Responsive_ReparentItemsInResponsiveMode && Responsive_ReparentItemsInResponsiveMode( '.responsive_groupfriends_element', $J('#responsive_groupfriends_element_ctn') );
+			
+			SetupAnimateOnHoverImages();
+		});
+	</script>
+
+
+
+<div class="no_header profile_page   "
+	 style="">
+
+	
+	
+
+
+<div class="profile_header_bg">
+
+	<div class="profile_header_bg_texture">
+		
+		<div class="profile_header">
+
+			
+						
+			<div class="profile_header_content" data-panel="{&quot;flow-children&quot;:&quot;row&quot;}" >
+
+				
+				<div class="playerAvatar profile_header_size offline" data-miniprofile="1844788479">
+										<div class="playerAvatarAutoSizeInner">
+													<div class="profile_avatar_frame">
+								<img src="https://cdn.fastly.steamstatic.com/steamcommunity/public/images/items/2861700/67498b6c05c5835f35f3eced8fa689cbbe0ac117.png">
+							</div>
+												<img src="https://avatars.fastly.steamstatic.com/8585fedd5846b8c5e863a9916209e12df585e495_full.jpg">
+					</div>
+				</div>
+
+				<div class="profile_header_centered_col">
+					<div class="profile_header_centered_persona">
+						<div class="persona_name" style="font-size: 24px;">
+							<span class="actual_persona_name">Kapibara</span>
+																						<span class="namehistory_link" onclick="ShowAliasPopup( this );">
+								<img id="getnamehistory_arrow" src="https://community.fastly.steamstatic.com/public/images/skin_1/arrowDn9x5.gif" width="9" height="5" border="0">
+							</span>
+														<div id="NamePopup" class="popup_block_new" style="display: none;">
+								<div class="popup_body popup_menu">
+									<div>Другие имена пользователя:</div>
+									<div id="NamePopupAliases">
+
+									</div>
+									<div style="display:none" id="NamePopupClearAliases">
+																			</div>
+									<div style="clear:both"></div>
+								</div>
+							</div>
+						</div>
+													<div class="header_real_name ellipsis">
+								<bdi>Капибара</bdi>
+																	<div class="header_location">
+																					<img class="profile_flag" src="https://community.fastly.steamstatic.com/public/images/countryflags/cn.gif">
+																				China									</div>
+															</div>
+											</div>
+						<div class="profile_header_summary desktop">
+						<div class="profile_summary">
+					<img src="https://community.fastly.steamstatic.com/economy/emoticon/steamthumbsdown" alt=":steamthumbsdown:" class="emoticon"> Информация отсуствует.				</div>
+				<div class="profile_summary_footer">
+					<span data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="whiteLink" class="whiteLink">Подробнее</span>
+				</div>
+						</div>
+				</div>
+
+					<div class="profile_header_summary mobile">
+						<div class="profile_summary">
+					<img src="https://community.fastly.steamstatic.com/economy/emoticon/steamthumbsdown" alt=":steamthumbsdown:" class="emoticon"> Информация отсуствует.				</div>
+				<div class="profile_summary_footer">
+					<span data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="whiteLink" class="whiteLink">Подробнее</span>
+				</div>
+						</div>
+
+				<div class="profile_header_badgeinfo" data-panel="{&quot;flow-children&quot;:&quot;column&quot;}" >
+											<div class="profile_header_badgeinfo_badge_area">
+															<a data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="persona_level_btn" href="https://steamcommunity.com/id/Kapibara-China/badges">
+														<div class="persona_name persona_level">Уровень <div class="friendPlayerLevel lvl_0"><span class="friendPlayerLevelNum">2</span></div></div>
+															</a>
+															<div class="profile_header_badge">
+																			<a href="https://steamcommunity.com/id/Kapibara-China/badges/13" class="favorite_badge">
+											<div class="favorite_badge_icon" data-tooltip-html="Разборчивый коллекционер<br>
+Игр приобретено: 7">
+												<img src="https://community.fastly.steamstatic.com/public/images/badges/13_gamecollector/5_80.png?v=4" class="badge_icon small">
+											</div>
+											<div class="favorite_badge_description">
+												<div class="name ellipsis">Разборчивый коллекционер</div>
+												<div class="xp">135 ед. опыта</div>
+											</div>
+										</a>
+																	</div>
+													</div>
+										<div class="profile_header_actions">
+																					<a class="btn_profile_action btn_medium" href="javascript:OpenFriendChat( '76561199805054207', 1844788479 );">
+									<span>Написать</span>
+								</a>
+														<span data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="btn_profile_action btn_medium" id="profile_action_dropdown_link" onclick="ShowMenu( this, 'profile_action_dropdown', 'right' );">
+								<span>Ещё… <img src="https://community.fastly.steamstatic.com/public/images/profile/profile_action_dropdown.png"></span>
+							</span>
+							<div class="popup_block" id="profile_action_dropdown" style="display: none;">
+								<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>								<div data-panel="{&quot;flow-children&quot;:&quot;row&quot;}" class="popup_body popup_menu shadow_content">
+																			<a class="popup_menu_item" href="javascript:AddProfileAward( 1, 'https://steamcommunity.com/login/home/?goto=https%3A%2F%2Fsteamcommunity.com%2Fid%2FKapibara-China%2F%3FinsideModal%3D0', '76561199805054207' )">
+											<img src="https://community.fastly.steamstatic.com/public/shared/images/award_icon.svg" class="reward_btn_icon"/>&nbsp; <span>Выдать награду сообщества</span>
+										</a>
+										<a class="popup_menu_item" href="https://store.steampowered.com/points/profile/76561199805054207?snr=2_100300_profile__points-shop-profile">
+											<img src="https://cdn.fastly.steamstatic.com/steamcommunity/public/assets/profile/equipped_items_icon.svg" id="view_equipped_items_icon" class="reward_btn_icon" />&nbsp; <span>Посмотреть используемые в профиле предметы из магазина предметов за очки</span>
+										</a>
+																		
+																														<a class="popup_menu_item" href="javascript:void(0);" onclick="PresentGroupInviteOptions();" ><img src="https://community.fastly.steamstatic.com/public/images/profile/icon_invitegroup.png">&nbsp; Пригласить в группу</a>
+																				<div class="profile_actions_follow">
+											<a style="" class="popup_menu_item follow_button" href="#" onclick="SetFollowing(true, function(bFollowing){ $J('.follow_button').hide(); $J('.unfollow_button').show();  }); HideMenu( 'profile_action_dropdown_link', 'profile_action_dropdown' ); return false;"><img src="https://community.fastly.steamstatic.com/public/images/sharedfiles/add_fav_ico_default.png">&nbsp; Подписаться</a>
+											<a style="display: none;" class="popup_menu_item unfollow_button" href="#" onclick="SetFollowing(false, function(bFollowing){ $J('.follow_button').show(); $J('.unfollow_button').hide();  }); HideMenu( 'profile_action_dropdown_link', 'profile_action_dropdown' ); return false;"><img src="https://community.fastly.steamstatic.com/public/images/sharedfiles/add_fav_ico_default.png">&nbsp; Отписаться</a>
+										</div>
+									
+																			<a class="popup_menu_item" href="#" onclick="ShowNicknameModal(); HideMenu( 'profile_action_dropdown_link', 'profile_action_dropdown' ); return false;"><img src="https://community.fastly.steamstatic.com/public/images/skin_1/notification_icon_edit_bright.png">&nbsp; Добавить ник</a>
+																																							<a class="popup_menu_item" href="#" onclick="StartTradeOffer( 1844788479 ); HideMenu( 'profile_action_dropdown_link', 'profile_action_dropdown' ); return false;"><img src="https://community.fastly.steamstatic.com/public/images/profile/icon_tradeoffers.png">&nbsp; Предложить обмен</a>
+																																						<a data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="popup_menu_item" href="javascript:ConfirmBlock();"><img src="https://community.fastly.steamstatic.com/public/images/profile/icon_block.png">&nbsp; Заблокировать</a>
+																												<a class="popup_menu_item" href="#" onclick="ReportProfile( '76561199805054207' ); HideMenu( 'profile_action_dropdown_link', 'profile_action_dropdown' ); return false;"><img src="https://community.fastly.steamstatic.com/public/images/skin_1/notification_icon_flag.png" style="margin: 0 1px;">&nbsp; Пожаловаться</a>
+																												<a class="popup_menu_item" href="javascript:RemoveFriend();"><img src="https://community.fastly.steamstatic.com/public/images/profile/icon_unfriend.png">&nbsp; Удалить из друзей</a>
+																																																					</div>
+							</div>
+											</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript"> $J( function() { InitProfileSummary( g_rgProfileData['summary'] ); } ); </script>
+	</div>
+</div>
+
+	<div class="profile_content ">
+		<div class="profile_content_inner">
+			
+			
+
+			
+			
+
+
+			<div class="profile_rightcol">
+				<div class="responsive_status_info">
+						<div class="profile_in_game persona offline">
+					<div class="profile_in_game_header">Не в сети</div>
+							<div class="profile_in_game_name">В сети: 19 дн. назад</div>
+			</div>
+						<div class="profile_ban_status">
+														<div class="profile_ban">
+					Несколько игровых блокировок					<span class="profile_ban_info">| <a class="whiteLink" href="https://support.steampowered.com/kb_article.php?ref=6899-IOSK-9514&l=russian" target="_blank" rel="" >Подробнее</a></span>
+				</div>
+						Дней с последней блокировки: 73								</div>
+				</div>
+
+				<div class="responsive_count_link_area">
+					
+					
+					<div data-panel="{&quot;maintainX&quot;:true,&quot;bFocusRingRoot&quot;:true,&quot;flow-children&quot;:&quot;row&quot;}" class="profile_badges">
+						<div class="profile_count_link_preview_ctn" data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" >
+																<div data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="profile_count_link ellipsis" >
+						<a href="https://steamcommunity.com/id/Kapibara-China/badges/">
+							<span class="count_link_label">Значки</span>&nbsp;
+							<span class="profile_count_link_total">
+																	3															</span>
+						</a>
+					</div>
+														<div class="profile_count_link_preview">
+																									<div class="profile_badges_badge "  data-tooltip-html="Столп сообщества" >
+										<a href="https://steamcommunity.com/id/Kapibara-China/badges/2">
+											<img src="https://community.fastly.steamstatic.com/public/images/badges/01_community/community02_80.png" class="badge_icon small">
+										</a>
+									</div>
+																										<div class="profile_badges_badge "  data-tooltip-html="Разборчивый коллекционер&lt;br&gt;
+Игр приобретено: 7" >
+										<a href="https://steamcommunity.com/id/Kapibara-China/badges/13">
+											<img src="https://community.fastly.steamstatic.com/public/images/badges/13_gamecollector/5_80.png?v=4" class="badge_icon small">
+										</a>
+									</div>
+																										<div class="profile_badges_badge "  data-tooltip-html="Итоги Steam 2024 года&lt;br&gt;
+Награда за просмотр своих итогов Steam 2024 года." >
+										<a href="https://steamcommunity.com/id/Kapibara-China/badges/68">
+											<img src="https://community.fastly.steamstatic.com/public/images/badges/generic/YIR2024_80.png" class="badge_icon small">
+										</a>
+									</div>
+																									<div style="clear: left;"></div>
+							</div>
+						</div>
+					</div>
+					
+					<div data-panel="{&quot;maintainX&quot;:true,&quot;bFocusRingRoot&quot;:true,&quot;flow-children&quot;:&quot;row&quot;}" id="responsive_groupfriends_element_ctn">
+					</div>
+
+					<div data-panel="{&quot;maintainX&quot;:true,&quot;bFocusRingRoot&quot;:true,&quot;flow-children&quot;:&quot;row&quot;}" class="profile_item_links">
+															<div data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="profile_count_link ellipsis" >
+						<a href="https://steamcommunity.com/id/Kapibara-China/games/?tab=all">
+							<span class="count_link_label">Игры</span>&nbsp;
+							<span class="profile_count_link_total">
+																	7															</span>
+						</a>
+					</div>
+																						<div data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="profile_count_link ellipsis" >
+						<a href="https://steamcommunity.com/id/Kapibara-China/inventory/">
+							<span class="count_link_label">Инвентарь</span>&nbsp;
+							<span class="profile_count_link_total">
+																	&nbsp; <!-- so the line spaces like the rest -->
+															</span>
+						</a>
+					</div>
+																																																<div data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="profile_count_link ellipsis" >
+						<a href="https://steamcommunity.com/id/Kapibara-China/myworkshopfiles/">
+							<span class="count_link_label">Работы в мастерской</span>&nbsp;
+							<span class="profile_count_link_total">
+																	1															</span>
+						</a>
+					</div>
+																						<div data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="profile_count_link ellipsis" >
+						<a href="https://steamcommunity.com/id/Kapibara-China/recommended/">
+							<span class="count_link_label">Обзоры</span>&nbsp;
+							<span class="profile_count_link_total">
+																	11															</span>
+						</a>
+					</div>
+																																													<div style="clear: left;"></div>
+					</div>
+				</div>
+
+									<div class="profile_group_links profile_count_link_preview_ctn responsive_groupfriends_element" data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" >
+															<div data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="profile_count_link ellipsis" >
+						<a href="https://steamcommunity.com/id/Kapibara-China/groups/">
+							<span class="count_link_label">Группы</span>&nbsp;
+							<span class="profile_count_link_total">
+																	4															</span>
+						</a>
+					</div>
+																			<div class="profile_count_link_preview">
+															<div class="profile_group profile_primary_group">
+									<div class="profile_group_avatar">
+										<a href="https://steamcommunity.com/groups/rustoria">
+											<img src="https://avatars.fastly.steamstatic.com/101b97be47e8cdb97c01a6398065e1d1dd00a48e_medium.jpg">
+										</a>
+									</div>
+									<a class="whiteLink" href="https://steamcommunity.com/groups/rustoria">
+										Rustoria									</a>
+									<div class="profile_group_membercount">Участников: 270 921</div>
+									<div style="clear: left;"></div>
+								</div>
+																															<div class="profile_group">
+										<div class="profile_group_avatar">
+											<a href="https://steamcommunity.com/groups/rustixrust">
+												<img src="https://avatars.fastly.steamstatic.com/a1d1ebedcb70a5f1a1e48f84afb49de7f2bc3933.jpg">
+											</a>
+										</div>
+										<a class="whiteLink" href="https://steamcommunity.com/groups/rustixrust">
+											[FR/EU] RustiX										</a>
+										<div class="profile_group_membercount">Участников: 1 124</div>
+										<div style="clear: left;"></div>
+									</div>
+																	<div class="profile_group">
+										<div class="profile_group_avatar">
+											<a href="https://steamcommunity.com/groups/Enardo">
+												<img src="https://avatars.fastly.steamstatic.com/b94bd915e4eb1e86b85462d64e5c1ec45b70fdb3.jpg">
+											</a>
+										</div>
+										<a class="whiteLink" href="https://steamcommunity.com/groups/Enardo">
+											EnardoGROUP										</a>
+										<div class="profile_group_membercount">Участников: 11 347</div>
+										<div style="clear: left;"></div>
+									</div>
+																					</div>
+					</div>
+				
+									<div class="profile_friend_links profile_count_link_preview_ctn responsive_groupfriends_element" data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" >
+															<div data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="profile_count_link ellipsis" >
+						<a href="https://steamcommunity.com/id/Kapibara-China/friends/">
+							<span class="count_link_label">Друзья</span>&nbsp;
+							<span class="profile_count_link_total">
+																	22															</span>
+						</a>
+					</div>
+							
+													<div class="profile_in_common responsive_hidden">
+								<a class="whiteLink" href="javascript:ShowFriendsInCommon( 1844788479 );">Общих друзей</a>: 2							</div>
+						
+						<div class="profile_topfriends profile_count_link_preview">
+																	<div data-panel="{&quot;flow-children&quot;:&quot;column&quot;}" class="friendBlock persona in-game" data-miniprofile="1614818980" >
+						<a class="friendBlockLinkOverlay" href="https://steamcommunity.com/profiles/76561199575084708"></a>
+										<div class="friendPlayerLevel lvl_20">
+					<span class="friendPlayerLevelNum">20</span>
+				</div>
+												<div class="playerAvatar in-game">
+				<img src="https://avatars.fastly.steamstatic.com/fd9a42903a69ac67e20360089e83e85f17d1e8e3_medium.jpg">
+			</div>
+			<div class="friendBlockContent">
+				взаим похвала<br>
+				<span class="friendSmallText">
+		<span class="linkFriend_in-game">В игре<br/>Grand Theft Auto V Legacy</span>
+				</span>
+			</div>
+		</div>
+																			<div data-panel="{&quot;flow-children&quot;:&quot;column&quot;}" class="friendBlock persona offline" data-miniprofile="1778266871" >
+						<a class="friendBlockLinkOverlay" href="https://steamcommunity.com/id/feeedyk"></a>
+										<div class="friendPlayerLevel lvl_10">
+					<span class="friendPlayerLevelNum">14</span>
+				</div>
+												<div class="playerAvatar offline">
+				<img src="https://avatars.fastly.steamstatic.com/03d79912a8edc4a67bec7d54179f88c812bc7d59_medium.jpg">
+			</div>
+			<div class="friendBlockContent">
+				F3DUK<br>
+				<span class="friendSmallText">
+		Не в сети
+				</span>
+			</div>
+		</div>
+																			<div data-panel="{&quot;flow-children&quot;:&quot;column&quot;}" class="friendBlock persona offline" data-miniprofile="64387991" >
+						<a class="friendBlockLinkOverlay" href="https://steamcommunity.com/profiles/76561198024653719"></a>
+										<div class="friendPlayerLevel lvl_10">
+					<span class="friendPlayerLevelNum">10</span>
+				</div>
+												<div class="playerAvatar offline">
+				<img src="https://avatars.fastly.steamstatic.com/a216547686647accd917f262064ab2743ea07f36_medium.jpg">
+			</div>
+			<div class="friendBlockContent">
+				spion_sniper#MRAZRUST<br>
+				<span class="friendSmallText">
+		Не в сети
+				</span>
+			</div>
+		</div>
+																			<div data-panel="{&quot;flow-children&quot;:&quot;column&quot;}" class="friendBlock persona offline" data-miniprofile="409215174" >
+						<a class="friendBlockLinkOverlay" href="https://steamcommunity.com/id/TNYTLR"></a>
+										<div class="friendPlayerLevel lvl_0">
+					<span class="friendPlayerLevelNum">5</span>
+				</div>
+												<div class="playerAvatar offline">
+				<img src="https://avatars.fastly.steamstatic.com/df574573631eed937620cf8433c273d7d6de5b3d_medium.jpg">
+			</div>
+			<div class="friendBlockContent">
+				ToNeYoTLR<br>
+				<span class="friendSmallText">
+		Не в сети
+				</span>
+			</div>
+		</div>
+																			<div data-panel="{&quot;flow-children&quot;:&quot;column&quot;}" class="friendBlock persona in-game" data-miniprofile="1288337989" >
+						<a class="friendBlockLinkOverlay" href="https://steamcommunity.com/profiles/76561199248603717"></a>
+										<div class="friendPlayerLevel lvl_0">
+					<span class="friendPlayerLevelNum">4</span>
+				</div>
+												<div class="playerAvatar in-game">
+				<img src="https://avatars.fastly.steamstatic.com/6a7f4d9794132b431f802086eec360bfb77e074a_medium.jpg">
+			</div>
+			<div class="friendBlockContent">
+				小鳥球<br>
+				<span class="friendSmallText">
+		<span class="linkFriend_in-game">В игре<br/>Crosshair V2</span>
+				</span>
+			</div>
+		</div>
+																			<div data-panel="{&quot;flow-children&quot;:&quot;column&quot;}" class="friendBlock persona in-game" data-miniprofile="1841838435" >
+						<a class="friendBlockLinkOverlay" href="https://steamcommunity.com/profiles/76561199802104163"></a>
+										<div class="friendPlayerLevel lvl_0">
+					<span class="friendPlayerLevelNum">3</span>
+				</div>
+												<div class="playerAvatar in-game">
+				<img src="https://avatars.fastly.steamstatic.com/e757fd444fa3ae37a984f9def8e6b720933bf2a6_medium.jpg">
+			</div>
+			<div class="friendBlockContent">
+				COBRA#AQRUX<br>
+				<span class="friendSmallText">
+		<span class="linkFriend_in-game">В игре<br/>Squad</span>
+				</span>
+			</div>
+		</div>
+															</div>
+					</div>
+				
+			</div>
+
+
+			<div class="profile_leftcol">
+
+				
+									<div class="profile_customization">
+						<div class="profile_recentgame_header profile_customization_header">
+							<div>Недавняя активность</div>
+															<div class="recentgame_quicklinks recentgame_recentplaytime">
+									<div>16,9 ч. за последние 2 недели</div>
+								</div>
+													</div>
+						<div class="profile_customization_block">
+
+							<div class="recent_games">
+																	<div class="recent_game">
+										<div data-panel="{&quot;type&quot;:&quot;PanelGroup&quot;}" class="recent_game_content">
+											<div class="game_info">
+												<div class="game_info_cap "><a href="https://steamcommunity.com/app/480"><img class="game_capsule" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/480/capsule_184x69.jpg"></a></div>
+												<div class="game_info_details">
+													92 ч. всего<br>
+																																										последний запуск 21 мая																																							</div>
+												<div class="game_name"><a class="whiteLink" href="https://steamcommunity.com/app/480">Spacewar</a></div>
+											</div>
+
+												<div class="game_info_stats">
+					<div class="game_info_achievements_only_ctn">
+													<div class="game_info_achievements">
+						<div class="game_info_achievements_summary_area">
+							<span class="game_info_achievement_summary">
+								<a class="whiteLink" href="https://steamcommunity.com/id/Kapibara-China/stats/480/achievements/">Достижения</a>
+								&nbsp; <span class="ellipsis">0 из 5</span>
+							</span>
+							<div class="achievement_progress_bar_ctn">
+															</div>
+						</div>
+						<div class="achievement_icons">
+																											</div>
+					</div>
+								<div style="clear: both;"></div>
+			</div>
+					</div>
+										</div>
+									</div>
+																	<div class="recent_game">
+										<div data-panel="{&quot;type&quot;:&quot;PanelGroup&quot;}" class="recent_game_content">
+											<div class="game_info">
+												<div class="game_info_cap "><a href="https://steamcommunity.com/app/1905180"><img class="game_capsule" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1905180/capsule_184x69.jpg?t=1733595297"></a></div>
+												<div class="game_info_details">
+													0,5 ч. всего<br>
+																																										последний запуск 21 мая																																							</div>
+												<div class="game_name"><a class="whiteLink" href="https://steamcommunity.com/app/1905180">OBS Studio</a></div>
+											</div>
+
+																					</div>
+									</div>
+																	<div class="recent_game">
+										<div data-panel="{&quot;type&quot;:&quot;PanelGroup&quot;}" class="recent_game_content">
+											<div class="game_info">
+												<div class="game_info_cap "><a href="https://steamcommunity.com/app/365670"><img class="game_capsule" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/365670/capsule_184x69.jpg?t=1742304743"></a></div>
+												<div class="game_info_details">
+													4,9 ч. всего<br>
+																																										последний запуск 19 мая																																							</div>
+												<div class="game_name"><a class="whiteLink" href="https://steamcommunity.com/app/365670">Blender</a></div>
+											</div>
+
+												<div class="game_info_stats">
+										<div class="game_info_stats_publishedfilecounts">
+						<span class="published_file_count_ctn">
+			<span class="published_file_icon recommendation"></span>
+			<a class="published_file_link" href="https://steamcommunity.com/id/Kapibara-China/recommended/365670/">Обзор 1</a>
+		</span>
+					</div>
+			</div>
+										</div>
+									</div>
+															</div>
+							<div>
+								<div class="recentgame_quicklinks">
+									
+									<a class="whiteLink" href="https://steamcommunity.com/id/Kapibara-China/games/">Все недавно запущенные</a>
+																			<span class="link_separator">|</span> <a class="whiteLink" href="https://steamcommunity.com/id/Kapibara-China/wishlist/">Список желаемого</a>
+																												<span class="link_separator">|</span> <a class="whiteLink" href="https://steamcommunity.com/id/Kapibara-China/recommended/">Обзоры</a>
+																	</div>
+								<div style="clear: right;"></div>
+							</div>
+						</div>
+					</div>
+				
+									<div class="profile_comment_area">
+						<script type="text/javascript">
+	$J( function() {
+		InitializeCommentThread( "Profile", "Profile_76561199805054207", {"feature":"-1","feature2":-1,"owner":"76561199805054207","total_count":0,"start":0,"pagesize":6,"has_upvoted":0,"upvotes":0,"votecountid":null,"voteupid":null,"commentcountid":null,"subscribed":false}, 'https://steamcommunity.com/comment/Profile/', 40 );
+	} );
+</script>
+<div class="commentthread_area"  id="commentthread_Profile_76561199805054207_area">
+	<div class="commentthread_header">
+		<div class="commentthread_header_and_count">
+			<span class="ellipsis commentthread_count_label">
+									<span class="commentthread_header_label">Комментарии</span>
+							</span>
+			<div class="commentthread_count">
+										<div class="commentthread_subscribe_checkbox_ctn">
+							<div data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="commentthread_subscribe_ctn " id="commentthread_Profile_76561199805054207_subscribe_checkbox">
+								<span class="commentthread_subscribe_checkbox">
+									<span class="commentthread_subscribe_check"></span>
+								</span>
+								<span class="commentthread_subscribe_desc">
+									Подписаться								</span>
+							</div>
+							<span class="commentthread_subscribe_hint"  data-tooltip-text="Подпишитесь, чтобы получать уведомления о новых комментариях." > (<span class="commentthread_subscribe_hint_q">?</span>)</span>
+						</div>
+								</div>
+		</div>
+		<div class="commentthread_paging " id="commentthread_Profile_76561199805054207_pagecontrols">
+						<div class="commentthread_pagelinks_ctn">
+				<a id="commentthread_Profile_76561199805054207_pagebtn_prev" href="javascript:void(0);" class="pagebtn">&lt;</a>
+				<span id="commentthread_Profile_76561199805054207_pagelinks" class="commentthread_pagelinks"></span>
+				<span id="commentthread_Profile_76561199805054207_pagedropdown" class="commentthread_pagedropdown"></span>
+				<a id="commentthread_Profile_76561199805054207_pagebtn_next" href="javascript:void(0);" class="pagebtn">&gt;</a>
+			</div>
+		</div>
+	</div>
+				<form id="commentthread_Profile_76561199805054207_form" name="commentthread_Profile_76561199805054207_form" action="" method="post" onsubmit="return false;">
+			<div class="commentthread_entry">
+				<div class="commentthread_user_avatar playerAvatar offline">
+										<a href="https://steamcommunity.com/profiles/76561199818032984" data-miniprofile="1857767256">
+												<img src="https://avatars.fastly.steamstatic.com/91123156311ddb94d8fe136763a57d82a47a8638.jpg" srcset="https://avatars.fastly.steamstatic.com/91123156311ddb94d8fe136763a57d82a47a8638.jpg 1x, https://avatars.fastly.steamstatic.com/91123156311ddb94d8fe136763a57d82a47a8638_medium.jpg 2x">											</a>
+				</div>
+				<div class="commentthread_entry_quotebox">
+					<textarea data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" rows="1" class="commentthread_textarea" name="commentthread_Profile_76561199805054207_textarea" id="commentthread_Profile_76561199805054207_textarea" placeholder="Оставить комментарий"></textarea>
+				</div>
+				<div class="commentthread_entry_submitlink" id="commentthread_Profile_76561199805054207_submit_container">
+					<a class="btn_grey_black btn_small_thin" href="javascript:CCommentThread.FormattingHelpPopup( 'Profile' );">
+						<span>Справка по форматированию</span>
+					</a>
+					&nbsp;
+					<span class="emoticon_container"><span class="emoticon_button small" id="emoticonbtn_6830c922c2c74"></span></span><script type="text/javascript">new CEmoticonPopup( $J('#emoticonbtn_6830c922c2c74'), $J('#commentthread_Profile_76561199805054207_textarea'), "https:\/\/steamcommunity.com" );</script>					<span data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="btn_green_white_innerfade btn_small" id="commentthread_Profile_76561199805054207_submit">
+						<span>Отправить</span>
+					</span>
+				</div>
+				<div class="commentthread_entry_error" id="commentthread_Profile_76561199805054207_entry_error">
+									</div>
+			</div>
+		</form>
+				<div style="display:none" class="commentthread_comment_container" id="commentthread_Profile_76561199805054207_postcontainer">
+			<div class="commentthread_comments" id="commentthread_Profile_76561199805054207_posts">
+							</div>
+		</div>
+		<div class="commentthread_footer" id="commentthread_Profile_76561199805054207_fpagecontrols">
+			<div class="commentthread_paging" id="commentthread_Profile_76561199805054207_fpagecontrols">
+				<a id="commentthread_Profile_76561199805054207_fpagebtn_prev" href="javascript:void(0);" class="pagebtn">&lt;</a>
+				<span id="commentthread_Profile_76561199805054207_fpagelinks" class="commentthread_pagelinks"></span>
+				<span id="commentthread_Profile_76561199805054207_fpagedropdown" class="commentthread_pagedropdown"></span>
+				<a id="commentthread_Profile_76561199805054207_fpagebtn_next" href="javascript:void(0);" class="pagebtn">&gt;</a>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div>					</div>
+							</div>
+
+			<div style="clear: both;"></div>
+		</div>
+	</div>
+
+</div>
+
+	<div id="reportAbuseModal" style="display: none;">
+		<div id="reportAbuseModalClose"><a href="javascript:hideModal('reportAbuseModal')"><img src="https://community.fastly.steamstatic.com/public/images/skin_1/modalClose2.gif" width="11" height="11" border="0" /></a></div>
+		<h1>Пожаловаться</h1>
+		<div class="reportAbuseModalRule"></div>
+		<div id="reportAbuseModalContents">
+			<form method="post" onSubmit="return checkAbuseSub( this );" action="https://steamcommunity.com/actions/ReportAbuse/" id="abuseForm">
+				<input type="hidden" name="abuseID" value="76561199805054207">
+				<input type="hidden" name="sessionid" value="0c18e3480fdd70c7c91a8a50">
+									<input type="hidden" name="ingameAppID" value="" />
+													<div class="abuseOptions">
+													<div class="abuseOption">
+								<input class="abuseRadio" type="radio" name="abuseType" id="AbuseRadio_Harassment" value="Harassment">
+								<label for="AbuseRadio_Harassment">Нападки</label>
+							</div>
+													<div class="abuseOption">
+								<input class="abuseRadio" type="radio" name="abuseType" id="AbuseRadio_Spoofing" value="Spoofing">
+								<label for="AbuseRadio_Spoofing">Выдает себя за другого пользователя</label>
+							</div>
+													<div class="abuseOption">
+								<input class="abuseRadio" type="radio" name="abuseType" id="AbuseRadio_Offensive_Profile" value="Offensive Profile">
+								<label for="AbuseRadio_Offensive_Profile">Оскорбительное содержимое профиля или аватара</label>
+							</div>
+													<div class="abuseOption">
+								<input class="abuseRadio" type="radio" name="abuseType" id="AbuseRadio_Offensive_UGC" value="Offensive UGC">
+								<label for="AbuseRadio_Offensive_UGC">Оскорбительные скриншоты или иллюстрации</label>
+							</div>
+													<div class="abuseOption">
+								<input class="abuseRadio" type="radio" name="abuseType" id="AbuseRadio_Spamming" value="Spamming">
+								<label for="AbuseRadio_Spamming">Спам приглашениями</label>
+							</div>
+													<div class="abuseOption">
+								<input class="abuseRadio" type="radio" name="abuseType" id="AbuseRadio_Advertisement" value="Advertisement">
+								<label for="AbuseRadio_Advertisement">Спам рекламой или ссылками</label>
+							</div>
+													<div class="abuseOption">
+								<input class="abuseRadio" type="radio" name="abuseType" id="AbuseRadio_Suspected_Hijacker" value="Suspected Hijacker">
+								<label for="AbuseRadio_Suspected_Hijacker">Подозревается в краже или фишинге</label>
+							</div>
+													<div class="abuseOption">
+								<input class="abuseRadio" type="radio" name="abuseType" id="AbuseRadio_Trade_Scam" value="Trade Scam">
+								<label for="AbuseRadio_Trade_Scam">Попытка обмана при обмене</label>
+							</div>
+													<div class="abuseOption">
+								<input class="abuseRadio" type="radio" name="abuseType" id="AbuseRadio_Cheating" value="Cheating">
+								<label for="AbuseRadio_Cheating">Подозревается в нечестной игре</label>
+							</div>
+												<div style="clear: left;"></div>
+					</div>
+								<div class="abuseDescriptionCtn gray_bevel fullwidth">
+					<textarea name="abuseDescription" id="abuseDescriptionArea" rows="3" cols="26" placeholder="Пожалуйста, опишите нарушение (обязательно)" ></textarea>
+				</div>
+				<div class="reportAbuseButtons">
+					<button type="submit" class="btn_green_white_innerfade btn_medium">
+						<span>Пожаловаться</span>
+					</button>
+				</div>
+			</form>
+
+		</div>
+
+	</div>
+
+		</div>	<!-- responsive_page_legacy_content -->
+
+			<div id="footer_spacer" class=""></div>
+	<div id="footer_responsive_optin_spacer"></div>
+	<div id="footer">
+					<div class="footer_content">
+				<span id="footerLogo"><img src="https://community.fastly.steamstatic.com/public/images/skin_1/footerLogo_valve.png?v=1" width="96" height="26" border="0" alt="Логотип Valve" /></span>
+				<span id="footerText">
+					&copy; Valve Corporation. Все права сохранены. Все торговые марки являются собственностью соответствующих владельцев в США и других странах. Часть географических сведений на этом сайте предоставлена <a href="https://steamcommunity.com/linkfilter/?u=http%3A%2F%2Fwww.geonames.org" target="_blank" rel=" noopener">geonames.org</a>.					<br>
+											<span class="valve_links">
+							<a href="http://store.steampowered.com/privacy_agreement/" target="_blank">Политика конфиденциальности</a>
+							&nbsp; | &nbsp;<a href="https://store.steampowered.com/legal/" target="_blank">Правовая информация</a>
+							&nbsp;| &nbsp;<a href="http://store.steampowered.com/subscriber_agreement/" target="_blank">Соглашение подписчика Steam</a>
+                            &nbsp;| &nbsp;<a href="http://store.steampowered.com/account/cookiepreferences/" target="_blank">Файлы cookie</a>
+						</span>
+									</span>
+			</div>
+							<div class="responsive_optin_link">
+				<div class="btn_medium btnv6_grey_black" onclick="Responsive_RequestMobileView()">
+					<span>Мобильная версия</span>
+				</div>
+			</div>
+			</div>
+	
+	</div>	<!-- responsive_page_content -->
+
+</div>	<!-- responsive_page_frame -->
 </body>
 </html>
