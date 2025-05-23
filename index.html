@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в Steam</title>
+    <style>
+        body {
+            background: #1b2838;
+            color: #c7d5e0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/russian/background_main.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        .login-box {
+            background: #171a21;
+            padding: 20px;
+            border-radius: 5px;
+            width: 600px;
+            text-align: center;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 150px;
+        }
+        .header .links a {
+            color: #c7d5e0;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 12px;
+        }
+        .header .links a:hover {
+            color: #66c0f4;
+        }
+        h1 {
+            font-size: 36px;
+            margin: 0;
+            color: #ffffff;
+        }
+        .login-methods {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .login-form {
+            width: 50%;
+            text-align: left;
+        }
+        .login-form label {
+            display: block;
+            font-size: 12px;
+            color: #8f98a0;
+            margin-bottom: 5px;
+        }
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #32353c;
+            border: none;
+            border-radius: 3px;
+            color: #c7d5e0;
+            font-size: 14px;
+        }
+        .login-form .checkbox {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            color: #8f98a0;
+        }
+        .login-form .checkbox input {
+            width: auto;
+            margin-right: 5px;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background: #66c0f4;
+            border: none;
+            border-radius: 3px;
+            color: #171a21;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .login-form button:hover {
+            background: #c7d5e0;
+        }
+        .qr-code {
+            width: 40%;
+            text-align: center;
+        }
+        .qr-code img {
+            width: 150px;
+            height: 150px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .qr-code p {
+            font-size: 12px;
+            color: #8f98a0;
+            margin: 10px 0 0;
+        }
+        .qr-code a {
+            color: #66c0f4;
+            text-decoration: none;
+        }
+        .qr-code a:hover {
+            color: #c7d5e0;
+        }
+        .error {
+            color: #f00;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        .footer-text {
+            font-size: 12px;
+            color: #8f98a0;
+            margin-top: 20px;
+        }
+        .footer-text a {
+            color: #66c0f4;
+            text-decoration: none;
+        }
+        .footer-text a:hover {
+            color: #c7d5e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="header">
+                <img src="https://steamcommunity-a.akamaihd.net/public/shared/images/header/logo_steam.svg" alt="Steam Logo">
+                <div class="links">
+                    <a href="#">МАГАЗИН</a>
+                    <a href="#">СООБЩЕСТВО</a>
+                    <a href="#">ИНФОРМАЦИЯ</a>
+                    <a href="#">ПОДДЕРЖКА</a>
+                </div>
+            </div>
+            <h1>ВХОД</h1>
+            <div class="login-methods">
+                <div class="login-form">
+                    <label>ВОЙДИТЕ, ИСПОЛЬЗУЯ ИМЯ АККАУНТА</label>
+                    <input type="text" placeholder="Имя аккаунта">
+                    <label>ПАРОЛЬ</label>
+                    <input type="password" placeholder="Пароль">
+                    <div class="checkbox">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Запомнить меня</label>
+                    </div>
+                    <button onclick="login()">Войти</button>
+                </div>
+                <div class="qr-code">
+                    <label></label>
+                    <img src="https://via.placeholder.com/150" alt="QR-код для входа">
+                    <p>Используйте мобильное приложение Steam, чтобы войти с помощью QR-кода</p>
+                    <p><a href="#">подробнее</a></p>
+                    <div class="error">Произошёл сбой</div>
+                </div>
+            </div>
+            <div class="footer-text">
+                Проблемы с входом? <a href="#">Я не могу войти в аккаунт</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function login() {
+            alert("Вход выполнен! (Это симуляция)");
+        }
+    </script>
+</body>
+</html>
